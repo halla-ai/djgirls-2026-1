@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "djgirls-2026-1 Placeholder Repo",
+    "output": "djgirls-2026-1-rendered.html",
+    "viewBox": [1376, 580],
+    "quality_profile": "showcase",
+    "views": [
+      { "id": "planned-flow", "label": "Planned visitor flow", "focus": ["visitor", "pages"], "note": "The repo holds no site yet; this reflects the planned minimal static flow until content lands." }
+    ]
+  },
+  "components": [
+    { "id": "visitor", "type": "external", "label": "Visitors", "sublabel": "cohort site audience", "pos": [40, 330], "size": [130, 60] },
+    { "id": "pages", "type": "frontend", "label": "Planned Site", "sublabel": "no site files yet", "pos": [250, 330], "size": [150, 64], "tag": "placeholder" },
+    { "id": "repo", "type": "cloud", "label": "GitHub", "sublabel": "halla-ai/djgirls-2026-1", "pos": [480, 330], "size": [150, 64], "tag": "3 commits" }
+  ],
+  "connections": [
+    { "id": "visitor-to-pages", "from": "visitor", "to": "pages", "label": "planned" },
+    { "id": "repo-to-pages", "from": "repo", "to": "pages", "label": "serves", "variant": "dashed" }
+  ],
+  "cards": [
+    { "dot": "slate", "title": "State", "items": ["Repository contains only README.md and AGENTS.md; no site, build, or deploy files exist", "Git remote is github.com/halla-ai/djgirls-2026-1 with 3 commits on main", "Last commit e91a913 adds a Codex AGENTS.md adapter; no architecture has landed yet"] }
+  ]
+}
