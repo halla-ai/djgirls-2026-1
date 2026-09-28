@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "djgirls-2026-1 Placeholder Repo",
+    "output": "djgirls-2026-1-rendered.html",
+    "quality_profile": "showcase",
+    "repository": { "url": "https://github.com/halla-ai/djgirls-2026-1", "provider": "github", "revision": "e91a913b23ec3d83d5b5c7c6a2e4f23f75b73368" }
+  },
+  "components": [
+    { "id": "agent", "type": "external", "label": "Codex Agents", "sublabel": "coding agent", "pos": [40, 80], "size": [150, 64], "sources": [{ "path": "AGENTS.md", "line": 3, "end_line": 4, "label": "Codex adapter only" }, { "path": "AGENTS.md", "line": 9, "label": "use Codex tools" }] },
+    { "id": "agents", "type": "backend", "label": "AGENTS.md", "sublabel": "Codex adapter", "pos": [330, 80], "size": [150, 64], "tag": "no project rules", "sources": [{ "path": "AGENTS.md", "line": 1, "end_line": 11, "label": "adapter rules" }] },
+    { "id": "readme", "type": "database", "label": "README.md", "sublabel": "source of truth", "pos": [620, 80], "size": [150, 64], "tag": "title only", "sources": [{ "path": "README.md", "line": 1, "label": "# djgirls-2026-1" }, { "path": "AGENTS.md", "line": 7, "end_line": 8, "label": "declared source of truth" }] }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "Repository: main", "wraps": ["agents", "readme"] }
+  ],
+  "connections": [
+    { "id": "agent-to-agents", "from": "agent", "to": "agents", "label": "reads" },
+    { "id": "agents-to-readme", "from": "agents", "to": "readme", "label": "defers rules to" }
+  ],
+  "cards": [
+    { "dot": "slate", "title": "State", "items": ["At e91a913, main held three files: README.md (a title line only), AGENTS.md and .gitignore", "At that revision there was no site, dependency, build or deploy configuration", ".gitignore excludes .omc/ and .omx/", "e91a913 was the third commit: initial commit, the .gitignore entries, then the Codex AGENTS.md adapter"] },
+    { "dot": "cyan", "title": "Adapter rules", "items": ["AGENTS.md scopes itself to this directory and its descendants", "Command, folder and policy changes belong in README.md, not in the adapter", "Claude-specific references are translated into Codex tools and skills"] }
+  ]
+}
