@@ -4,26 +4,26 @@
   "meta": {
     "title": "djgirls-2026-1 Placeholder Repo",
     "output": "djgirls-2026-1-rendered.html",
-    "viewBox": [1100, 460],
     "quality_profile": "showcase",
     "repository": { "url": "https://github.com/halla-ai/djgirls-2026-1", "provider": "github", "revision": "e91a913b23ec3d83d5b5c7c6a2e4f23f75b73368" },
     "views": [
-      { "id": "agent-entry", "label": "Agent entry path", "focus": ["agent", "agents", "readme"], "note": "The only wiring in the repo today: a coding agent reads AGENTS.md, which defers every project rule to README.md." }
+      { "id": "agent-entry", "label": "Agent entry path", "focus": ["agent", "agents", "readme"], "note": "The only wiring in the repo: AGENTS.md is a Codex adapter that defers every project rule to README.md." }
     ]
   },
   "components": [
-    { "id": "agent", "type": "external", "label": "Coding Agents", "sublabel": "e.g. Codex", "pos": [150, 200], "size": [150, 64] },
-    { "id": "agents", "type": "backend", "label": "AGENTS.md", "sublabel": "Codex adapter", "pos": [475, 200], "size": [150, 64], "tag": "no project rules", "sources": [{ "path": "AGENTS.md", "line": 3, "label": "Codex adapter only" }] },
-    { "id": "readme", "type": "database", "label": "README.md", "sublabel": "source of truth", "pos": [750, 200], "size": [150, 64], "tag": "title only", "sources": [{ "path": "README.md", "line": 1, "label": "# djgirls-2026-1" }] }
+    { "id": "agent", "type": "external", "label": "Codex Agents", "sublabel": "coding agent", "pos": [40, 80], "size": [150, 64], "sources": [{ "path": "AGENTS.md", "line": 3, "end_line": 4, "label": "Codex adapter only" }, { "path": "AGENTS.md", "line": 9, "label": "use Codex tools" }] },
+    { "id": "agents", "type": "backend", "label": "AGENTS.md", "sublabel": "Codex adapter", "pos": [330, 80], "size": [150, 64], "tag": "no project rules", "sources": [{ "path": "AGENTS.md", "line": 1, "end_line": 11, "label": "adapter rules" }] },
+    { "id": "readme", "type": "database", "label": "README.md", "sublabel": "source of truth", "pos": [620, 80], "size": [150, 64], "tag": "title only", "sources": [{ "path": "README.md", "line": 1, "label": "# djgirls-2026-1" }, { "path": "AGENTS.md", "line": 7, "end_line": 8, "label": "declared source of truth" }] }
   ],
   "boundaries": [
-    { "kind": "region", "label": "main @ e91a913 (public, Pages off)", "wraps": ["agents", "readme"] }
+    { "kind": "region", "label": "Repository: main", "wraps": ["agents", "readme"] }
   ],
   "connections": [
-    { "id": "agent-to-agents", "from": "agent", "to": "agents", "label": "reads first" },
+    { "id": "agent-to-agents", "from": "agent", "to": "agents", "label": "reads" },
     { "id": "agents-to-readme", "from": "agents", "to": "readme", "label": "defers rules to" }
   ],
   "cards": [
-    { "dot": "slate", "title": "State", "items": ["main holds only README.md (a title), AGENTS.md and .gitignore; no site, build, or deploy files exist", "GitHub Pages is not enabled for halla-ai/djgirls-2026-1 (Pages API returned 404 on 2026-09-28)", ".gitignore excludes the .omc/ and .omx/ agent state directories", "main tip e91a913 (3 commits) adds the Codex AGENTS.md adapter; no architecture has landed yet"] }
+    { "dot": "slate", "title": "State", "items": ["main holds three files: README.md (a title line only), AGENTS.md and .gitignore", "No site, dependency, build or deploy configuration exists in the repo", ".gitignore excludes .omc/ and .omx/", "3 commits on main: initial commit, the .gitignore entries, the Codex AGENTS.md adapter"] },
+    { "dot": "cyan", "title": "Adapter rules", "items": ["AGENTS.md scopes itself to this directory and its descendants", "Command, folder and policy changes belong in README.md, not in the adapter", "Claude-specific references are translated into Codex tools and skills"] }
   ]
 }
