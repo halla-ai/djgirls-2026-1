@@ -6,11 +6,11 @@
   "status": "pass",
   "visualReview": "pending",
   "provenance": "current",
-  "deliveryReceiptId": "7a25b195-0377-4734-a477-9505e5484419",
+  "deliveryReceiptId": "0270fdc4-facb-460c-9957-203a5f5280e1",
   "artifact": {
     "path": "docs/djgirls-2026-1-rendered.html",
-    "sha256": "bbefb5a305d547791b2cdea533029e0f14f1c7d8472d8267e5a4af027824d31a",
-    "bytes": 748541
+    "sha256": "f45011a78fd1a49f98898b5ba1d88726fec815931c1c576385f5ac71bba49a6a",
+    "bytes": 748576
   },
   "state": {
     "detail": "read",
@@ -937,23 +937,23 @@
         "file": "djgirls-2026-1-rendered.visual-check.html"
       },
       {
-        "sha256": "0acae6cf7fe726c120094c6f64b798dbe4615b0c68124a06ad1346858bb5d0f8",
-        "bytes": 119101,
+        "sha256": "cb058856832b0887f7d0ba2d560a4dfafa61df1fa10e243f4f2b7c7c3d7d6aef",
+        "bytes": 120227,
         "file": "djgirls-2026-1-rendered.visual-check.1440x900.light.png"
       },
       {
-        "sha256": "bfd38e1f80012d108a32a5f2c06e74d0155e80f2bbead9a8948ea84af0ea3a71",
-        "bytes": 122889,
+        "sha256": "0a160f4a2dde02d7d02f0040912b91c50dc11e224a25b505c84531112b027968",
+        "bytes": 124114,
         "file": "djgirls-2026-1-rendered.visual-check.1440x900.dark.png"
       },
       {
-        "sha256": "4a9f9036b673f47c2f253ad0e8724cc60ef64ea6e209a52b75ff3f92dfbabb37",
-        "bytes": 143208,
+        "sha256": "3c442efc583e48e33aea0b9e9b1a8d8363e8a37eda78a64a89fbaad23c540b13",
+        "bytes": 144000,
         "file": "djgirls-2026-1-rendered.visual-check.2048x1320.light.png"
       },
       {
-        "sha256": "fac673a065387be556edadb520cc04ff4fbcf04fadc736aa5a848e63b5cf742a",
-        "bytes": 149419,
+        "sha256": "ba0a4caaafb581e06da7f95b5093a9717552601b0947a5df9d089fbf7215a2a4",
+        "bytes": 150679,
         "file": "djgirls-2026-1-rendered.visual-check.2048x1320.dark.png"
       }
     ]

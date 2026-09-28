@@ -20,7 +20,7 @@
     { "id": "agents-to-readme", "from": "agents", "to": "readme", "label": "defers rules to" }
   ],
   "cards": [
-    { "dot": "slate", "title": "State", "items": ["main holds three files: README.md (a title line only), AGENTS.md and .gitignore", "No site, dependency, build or deploy configuration exists in the repo", ".gitignore excludes .omc/ and .omx/", "3 commits on main: initial commit, the .gitignore entries, the Codex AGENTS.md adapter"] },
+    { "dot": "slate", "title": "State", "items": ["At e91a913, main held three files: README.md (a title line only), AGENTS.md and .gitignore", "At that revision there was no site, dependency, build or deploy configuration", ".gitignore excludes .omc/ and .omx/", "e91a913 was the third commit: initial commit, the .gitignore entries, then the Codex AGENTS.md adapter"] },
     { "dot": "cyan", "title": "Adapter rules", "items": ["AGENTS.md scopes itself to this directory and its descendants", "Command, folder and policy changes belong in README.md, not in the adapter", "Claude-specific references are translated into Codex tools and skills"] }
   ]
 }
