@@ -5,10 +5,7 @@
     "title": "djgirls-2026-1 Placeholder Repo",
     "output": "djgirls-2026-1-rendered.html",
     "quality_profile": "showcase",
-    "repository": { "url": "https://github.com/halla-ai/djgirls-2026-1", "provider": "github", "revision": "e91a913b23ec3d83d5b5c7c6a2e4f23f75b73368" },
-    "views": [
-      { "id": "agent-entry", "label": "Agent entry path", "focus": ["agent", "agents", "readme"], "note": "The only wiring in the repo: AGENTS.md is a Codex adapter that defers every project rule to README.md." }
-    ]
+    "repository": { "url": "https://github.com/halla-ai/djgirls-2026-1", "provider": "github", "revision": "e91a913b23ec3d83d5b5c7c6a2e4f23f75b73368" }
   },
   "components": [
     { "id": "agent", "type": "external", "label": "Codex Agents", "sublabel": "coding agent", "pos": [40, 80], "size": [150, 64], "sources": [{ "path": "AGENTS.md", "line": 3, "end_line": 4, "label": "Codex adapter only" }, { "path": "AGENTS.md", "line": 9, "label": "use Codex tools" }] },
